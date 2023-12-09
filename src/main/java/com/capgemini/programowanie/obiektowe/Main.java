@@ -19,7 +19,7 @@ public class Main {
 
         try {
             // Tworzenie nowego klienta i zwrócenie jego ID klienta
-            String clientId = clientService.createNewClient("Jane", "Doe");
+            String clientId = clientService.createNewClient("Anna", "Kowalska");
 
             // Sprawdzenie, czy klient został poprawnie utworzony
             LocalDate creationDate = clientService.getClientCreationDate(clientId);
@@ -44,7 +44,7 @@ public class Main {
             System.out.println("Number of premium clients: " + clientService.getNumberOfPremiumClients());
 
             // Dodajemy kolejnego klienta i metal do magazynu
-            String clientId2 = clientService.createNewClient("John", "Smith");
+            String clientId2 = clientService.createNewClient("Jan", "Kowalski");
             warehouseService.addMetalIngot(clientId2, SupportedMetalType.SILVER, 2000.0);
             System.out.println("Added 2000.0 units of SILVER for client with ID: " + clientId2);
 
